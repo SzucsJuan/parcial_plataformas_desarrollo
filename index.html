@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+      
+      fetch('src/views/login.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('app').innerHTML = data;
+        })
+        .catch(error => {
+          console.log('Error al cargar el login.html:', error);
+        });
+
+    </script>
+</body>
+</html>   
