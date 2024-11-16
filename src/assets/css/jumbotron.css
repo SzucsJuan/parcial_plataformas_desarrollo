@@ -1,12 +1,12 @@
 .banner-jumbotron{
-    background-image: url(../img/banner.jpg);
+    background-image: url(../../public/images/banner.jpg);
     background-size: cover;
     background-position: 40%;
     height: 70vh;
 }
 
 .banner-jumbotron2{
-    background-image: url(../img/Banner-tres.jpg);
+    background-image: url(../../public/images/Banner-tres.jpg);
     background-size: cover;
     background-position: 40%;
     height: 70vh;
