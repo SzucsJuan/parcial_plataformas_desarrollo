@@ -1,0 +1,73 @@
+@import './nav.css';
+@import './carousel.css';
+@import './cards.css';
+@import './contacto.css';
+@import './nosotros.css';
+@import './recetas.css';
+@import './recetasSaladas.css';
+@import './recetasDulces.css';
+@import './jumbotron.css';
+
+
+
+* {
+    font-family: 'Secular One', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #EBEBEB !important;
+}
+
+footer {
+    margin-top: auto;
+    color: #F15025;
+}
+
+.titulo-banner-prinicpal{
+    color: white;
+}
+
+.footer h4 , h6 {
+    color: #F15025 !important;
+}
+
+.footer > p, a {
+    text-decoration: none !important;
+    color: black !important;
+}
+
+.space{
+    margin-left: 5px;
+}
+
+.star {
+    font-size: x-large;
+    color: gray;
+}
+.star:last-child {
+    margin-right: 0;
+}
+.star:before {
+    content: '\2605';
+}
+.star.on {
+    color: #F15025;
+}
+.star.half:after {
+        content: '\2605';
+        color: #F15025;
+        margin-left: -20px;
+        width: 10px;
+        position: absolute;
+        overflow: hidden;
+}
+
+.page-item{
+    align-items: center;
+    background-color: #F15025 !important;
+}
+    
+
