@@ -3,22 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de sesión</title>
+    <title>Home</title>
+    <style>
+      .hidden{
+        display: none;
+      }
+    </style>
 </head>
 <body>
-    <div id="app"></div>
-
-    <script>
-      
-      fetch('src/views/login.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('app').innerHTML = data;
-        })
-        .catch(error => {
-          console.log('Error al cargar el login.html:', error);
-        });
-
-    </script>
+  <h1 id="welcomeMessage">Hola,</h1>
+  <button id="logoutBtn" class="hidden">Logout</button>
+  <script>
+    var user = localStorage.getItem("user");
+    if(user){
+      var parsedUser = JSON.parse(user);
+      document.getElementById("welcomeMessage").innerHTML = `Hola, ${parsedUser.username}`;
+      document.getElementById("logoutBtn").classList.remove("hidden");
+    } else {
+      document.getElementById("welcomeMessage").innerHTML = `Hola, porfavor <a href = 'login.html'> LOGUEO </a>`;
+    }
+    document.getElementById("logoutBtn").addEventListener("click", function(){
+      localStorage.removeItem("user");
+      window.location.href = "login.html"
+    })
+  </script>
 </body>
 </html>   

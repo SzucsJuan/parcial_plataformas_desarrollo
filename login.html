@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/assets/css/style.css">
+    <title>Login</title>
+</head>
+<body>
+    <form id="loginForm">
+        <h2>Login</h2>
+        <div>
+        <input type="text" placeholder="Usuario" name="username"
+        class="validate"
+        required id="username">
+        </div>
+        <div>
+        <input type="password" placeholder="Contraseña" name="password"
+        class="validate"
+        required id="password">
+        </div>
+        <button type="submit">Iniciar Sesion</button>
+        &nbsp; <a href="register.html">Registrarse</a>
+        <div class="alert">
+          <p id="cartel"></p>
+        </div>
+      </form>
+      <script src="src/js/login.js">
+      </script>
+</body>
+</html>
