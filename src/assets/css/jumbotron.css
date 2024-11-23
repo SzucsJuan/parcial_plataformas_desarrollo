@@ -1,8 +1,8 @@
-.banner-jumbotron{
-    background-image: url(../../public/images/banner.jpg);
-    background-size: cover;
-    background-position: 40%;
-    height: 70vh;
+.banner-jumbotron {
+    background-image: url(../../public/images/banner.jpg) !important;
+    background-size: cover !important;
+    background-position: 40% !important;
+    height: 70vh !important;
 }
 
 .banner-jumbotron2{
