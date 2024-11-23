@@ -196,6 +196,28 @@ button{
     font-weight: 500;
 }
 
+#message {
+    margin-top: 15px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    display: none;
+}
+
+#message.success {
+    color: #4CAF50;
+    background-color: #E8F5E9;
+    border: 1px solid #4CAF50;
+}
+
+#message.error {
+    color: #F44336;
+    background-color: #FDECEA;
+    border: 1px solid #F44336;
+}
+
 video {
     position: fixed;
     top: 50%;
@@ -207,5 +229,3 @@ video {
     z-index: -1;
     transform: translateX(-50%) translateY(-50%);
 }
-
-
