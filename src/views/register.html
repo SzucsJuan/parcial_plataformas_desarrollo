@@ -12,16 +12,23 @@
     <video muted autoplay loop>
         <source src="../public/video/video_login.mp4" type="video/mp4">
     </video>
-    <div class="login-box" style="height: 520px;">
+    <div class="login-box" style="height: 570px;">
         <div class="login-header">
             <header>Esta es la pantalla de registro</header>
             <p>¡Nos alegra que te sumes a la familia de <span>Digital Recipes</span>!</p>
+        </div>
+        <div class="input-box">
+            <select id="role" class="input-field" required>
+                <option value="admin">Admin</option>
+                <option value="user">Foodie</option>
+            </select>
+            <label for="role">Selecciona un rol</label>
         </div>
         <form id="register">
             <div class="input-box">
                 <input type="text" class="input-field" name="username" id="username" 
                 autocomplete="off" required>
-                <label for="username">Usuario</label>
+                <label for="username">Nombre de Usuario</label>
             </div>
             <div class="input-box">
                 <input type="password" class="input-field" name="password" id="password" 

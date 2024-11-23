@@ -3,6 +3,7 @@ document.getElementById("register").addEventListener("submit", function(event) {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
     var confirmPassword = document.getElementById("confirmPassword").value;
+    var role = document.getElementById("role").value;
 
     const messageRegister = document.getElementById("message");
 
@@ -16,7 +17,9 @@ document.getElementById("register").addEventListener("submit", function(event) {
     const user = {
         username: username,
         password: password,
+        role: role
     };
+
     localStorage.setItem(username, JSON.stringify(user));
 
     messageRegister.textContent = "Registro exitoso, ya puedes loguearte.";
