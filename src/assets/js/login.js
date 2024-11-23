@@ -10,12 +10,10 @@ document.getElementById("login").addEventListener("submit", function(event) {
         var parsedUser = JSON.parse(user);
         if (parsedUser.password === password) {
             localStorage.setItem("user", JSON.stringify(parsedUser));
-            
-            if (parsedUser.role === "admin") {
-                window.location.href = "src/views/home.html";
-            } else {
-                window.location.href = "src/views/home.html";
-            }
+
+            localStorage.setItem("role", parsedUser.role); 
+
+            window.location.href = "src/views/home.html";
         } else {
             messageLogin.textContent = "El usuario o la contraseña son incorrectos.";
             messageLogin.className = "error";
