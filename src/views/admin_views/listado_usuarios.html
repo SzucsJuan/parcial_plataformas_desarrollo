@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/jumbotron.css">
-    <link rel="shortcut icon" href="../public/images/DigitalRecipes.jpeg" />
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/table.css">
+    <link rel="shortcut icon" href="../../public/images/DigitalRecipes.jpeg">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/84afdc28bf.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
@@ -16,59 +16,13 @@
         crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <title>Digital Recipes</title>
-    <script>
-        const recetas = [
-            { id: 1, nombre: "Budín", img: "budin.jpg", subtitulo: "Postre clásico", reseñas: 5 },
-            { id: 2, nombre: "Lasagna", img: "lasagna.jpg", subtitulo: "Plato italiano", reseñas: 8 },
-            { id: 3, nombre: "Tarta", img: "tarta.jpg", subtitulo: "Rápido y delicioso", reseñas: 3 },
-        ];
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const recetasContainer = document.querySelector('.row');
-            if (recetas.length > 0) {
-                recetas.forEach(receta => {
-                    const recetaHTML = `
-                        <div class="col-sm-4 mb-sm-0 p-4">
-                            <a href="receta_individual.html?id=${receta.id}">
-                                <div class="card">
-                                    <img src="img/recetas/${receta.img}" alt="Imagen de ${receta.nombre}">
-                                    <div class="card-body">
-                                        <h5 class="card-title">${receta.subtitulo}</h5>
-                                        <h3 class="card-text">${receta.nombre}</h3>
-                                        <div class="stars">
-                                            ${'<span class="star on"></span>'.repeat(4)}
-                                            <span class="star"></span>
-                                        </div>
-                                        <span>${receta.reseñas} reseñas</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    `;
-                    recetasContainer.innerHTML += recetaHTML;
-                });
-            } else {
-                recetasContainer.innerHTML = "No hay recetas registradas.";
-            }
-        });
-
-        function redireccionar() {
-            const enlaces = [
-                "/html/recetas/recetaBudin.html",
-                "/html/recetas/recetaLasagna.html",
-                "/html/recetas/recetaTarta.html",
-            ];
-            const enlaceAleatorio = enlaces[Math.floor(Math.random() * enlaces.length)];
-            window.location.href = enlaceAleatorio;
-        }
-    </script>
+    <title>DR - Listado de usuarios</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-md bg-body-tertiary">
         <div class="container-fluid d-flex justify-content-between">
-            <a class="navbar-brand" href="home.html">
+            <a class="navbar-brand" href="../home.html">
                 <h1>DR</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -82,17 +36,18 @@
                         aria-label="Search">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="reseñas.html">Reseñas</a>
+                            <a class="nav-link" href="../reseñas.html">Reseñas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Random</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                            <a class="nav-link" href="../nosotros.html">Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contacto.html">Contacto</a>
+                            <a class="nav-link" href="../contacto.html">Contacto</a>
                         </li>
+                        <li class="nav-item">
                         <li class="nav-item" id="adminProfile">
                             <a href="#" id="profileIcon" class="nav-link" data-bs-toggle="modal"
                                 data-bs-target="#roleModal">
@@ -100,7 +55,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="../../login.html" id="profileIcon" class="nav-link">
+                            <a href="../../../login.html" id="profileIcon" class="nav-link">
                                 <span class="material-icons">login</span>
                             </a>
                         </li>
@@ -114,10 +69,10 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body text-center">
-                                        <a href="admin_views/listado_usuarios.html" class="btn btn-primary w-100 mb-2">
+                                        <a href="listado_usuarios.html" class="btn btn-primary w-100 mb-2">
                                             Administrar Usuarios <span class="ms-2">👥</span>
                                         </a>
-                                        <a href="admin_views/listado_recetas.html" class="btn btn-primary w-100 mb-2">
+                                        <a href="listado_recetas.html" class="btn btn-primary w-100 mb-2">
                                             Administrar Recetas <span class="ms-2">🍝</span>
                                         </a>
                                         <button class="btn btn-primary w-100 mb-2"
@@ -128,39 +83,32 @@
                                 </div>
                             </div>
                         </div>
+                        </li>
                     </ul>
                 </form>
             </div>
         </div>
     </nav>
-    <div
-        class="banner-jumbotron jumbotron d-flex flex-column justify-content-center align-items-center text-white text-center">
-        <h1 class="jumbotron-title display-3 fw-bold titulo-banner-prinicpal">Encuentra tu receta</h1>
-        <div class="buttons-container d-flex flex-row p-3 gap-4">
-            <div>
-                <a class="button1 btn fw-bold" href="#">Salado</a>
-            </div>
-            <div>
-                <a class="button2 btn fw-bold" href="#">Dulce</a>
-            </div>
+    <div class="container pt-4">
+        <h1 class="text-center">Listado de usuarios activos</h1>
+        <table class="table table-sm table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Usuario</th>
+                    <th>Contraseña</th>
+                    <th>Tipo usuario</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+
+            </tbody>
+        </table>
+        <div class="d-flex justify-content-center">
+            <ul class='pagination'>
+
+            </ul>
         </div>
-    </div>
-    <div class="container p-4">
-        <h1 class="text-center p-3">Nuestras recetas más recientes</h1>
-        <div class="row"></div>
-        <section id="Random">
-            <div class="banner-jumbotron2 jumbotron d-flex flex-column justify-content-center 
-            align-items-center text-white text-center">
-                <h1 class="jumbotron-title2 display-3 fw-bold titulo">¿Te animas a un juego?</h1>
-                <div class="buttons-container d-flex flex-row p-3 gap-4">
-                    <a class="button1 btn fw-bold" href="#" onclick="redireccionar()">SORPRENDEME</a>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div class="text-center p-5" style="color: #f15025;">
-        <h2>No te pierdas de las nuevas recetas!!</h2>
-        <h5>Todas las semanas renovamos nuestras recetas para brindarte siempre un menu completo y variado.</h5>
     </div>
     <footer class="text-center text-lg-start bg-light text-muted footer">
         <section class="">
@@ -172,8 +120,8 @@
                             <h4>DigitalRecipes</h4>
                         </div>
                         <p>
-                            Esta es una página destinada a hacerte más fácil la tarea de cocinar, brindándote recetas
-                            nuevas y deliciosas todos los días!
+                            Esta es una página destinada a hacerte más facil la tarea de cocinar, brindándote recetas
+                            nuevas y deliciosas todos los dias!
                         </p>
                     </div>
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -181,13 +129,16 @@
                             Conoce nuestro sitio
                         </h6>
                         <p>
-                            <a href="reseñas.html" class="text-reset text-decoration-none">Reseñas</a>
+                            <a href="../home.html" class="text-reset text-decoration-none">Inicio</a>
                         </p>
                         <p>
-                            <a href="nosotros.html" class="text-reset text-decoration-none">Nosotros</a>
+                            <a href="../reseñas.html" class="text-reset text-decoration-none">Reseñas</a>
                         </p>
                         <p>
-                            <a href="contacto.html" class="text-reset text-decoration-none">Contacto</a>
+                            <a href="../nosotros.html" class="text-reset text-decoration-none">Nosotros</a>
+                        </p>
+                        <p>
+                            <a href="../contacto.html" class="text-reset text-decoration-none">Contacto</a>
                         </p>
                     </div>
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
@@ -203,15 +154,15 @@
                                     class="space">Digital.Recipes</span></a>
                         </p>
                         <p>
-                            <a href="https://web.whatsapp.com/" target="_blank"><i class="fab fa-whatsapp"></i><span
-                                    class="space">11-6133-3232</span></a>
+                            <a href="https://twitter.com/home" target="_blank"><i class="fab fa-twitter"></i><span
+                                    class="space">Digital.Recipes</span></a>
                         </p>
                     </div>
                 </div>
             </div>
         </section>
     </footer>
-    <script src="../assets/js/roles.js"></script>
+    <script src="../../assets/js/gestion_users.js"></script>
 </body>
 
 </html>

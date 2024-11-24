@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const profileIcon = document.getElementById("profileIcon");
 const roleModal = document.getElementById("roleModal");
-const adminOptions = document.getElementById("adminOptions");
 
 profileIcon.addEventListener("click", function (event) {
     event.preventDefault();
