@@ -67,7 +67,7 @@
 <body>
     <nav class="navbar navbar-expand-md bg-body-tertiary">
         <div class="container-fluid d-flex justify-content-between">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="home.html">
                 <h1>DR</h1>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -92,21 +92,23 @@
                         <li class="nav-item">
                             <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item" id="adminProfile">
                             <a href="#" id="profileIcon" class="nav-link">
                                 <span class="material-icons">account_circle</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../../login.html" id="profileIcon" class="nav-link">
+                                <span class="material-icons">login</span>
                             </a>
                         </li>
                         <div id="roleModal" class="modal hidden">
                             <div class="modal-content">
                                 <span class="close" onclick="closeModal()">&times;</span>
                                 <div id="adminOptions" class="options hidden">
+                                    <button onclick="handleAction('adminUsuarios')">Administrar Usuarios</button>
                                     <button onclick="handleAction('adminRecetas')">Administrar Recetas</button>
                                     <button onclick="handleAction('cargarRecetas')">Cargar Recetas</button>
-                                    <button onclick="handleAction('adminUsuarios')">Administrar Usuarios</button>
-                                </div>
-                                <div id="userOptions" class="options hidden">
-                                    <button onclick="handleAction('cerrarSesion')">Cerrar Sesión</button>
                                 </div>
                             </div>
                         </div>

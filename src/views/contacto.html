@@ -39,11 +39,26 @@
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
+                    <li class="nav-item" id="adminProfile">
+                        <a href="#" id="profileIcon" class="nav-link">
+                            <span class="material-icons">account_circle</span>
+                        </a>
+                    </li>
                     <li class="nav-item">
-                        <a href="/login.html" class="nav-link">
+                        <a href="../../login.html" id="profileIcon" class="nav-link">
                             <span class="material-icons">login</span>
                         </a>
                     </li>
+                    <div id="roleModal" class="modal hidden">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <div id="adminOptions" class="options hidden">
+                                <button onclick="handleAction('adminUsuarios')">Administrar Usuarios</button>
+                                <button onclick="handleAction('adminRecetas')">Administrar Recetas</button>
+                                <button onclick="handleAction('cargarRecetas')">Cargar Recetas</button>
+                            </div>
+                        </div>
+                    </div>
                 </ul>
         </div>
     </div>
@@ -147,6 +162,6 @@
             </div>
         </section>
     </footer>
+    <script src="../assets/js/roles.js"></script>
 </body>
-
 </html>
