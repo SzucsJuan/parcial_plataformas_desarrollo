@@ -1,0 +1,52 @@
+<div class="modal fade" id="cargarRecetasModal" tabindex="-1" aria-labelledby="cargarRecetasModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="titulo justify-content-center mt-0">Agregar una nueva receta</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form enctype="multipart/form-data">
+                    <div class="form-group p-2">
+                        <label for="nombre">Nombre de la receta</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese el nombre" required>
+                    </div>
+                    <div class="form-group p-2">
+                        <label for="sub_titulo">Subtitulo para la carta de presentación</label>
+                        <input type="text" class="form-control" name="sub_titulo" id="sub_titulo" placeholder="Ingrese un subtitulo" required>
+                    </div>
+                    <div class="form-group p-2">
+                        <label for="tipo">Tipo de Receta</label>
+                        <select class="form-control" name="tipo" id="tipo" required>
+                            <option value="dulce">Dulce</option>
+                            <option value="salado">Salado</option>
+                        </select>
+                    </div>
+                    <div class="form-group p-2 col-6">
+                        <label for="tiempo_coccion">Tiempo de Coccion</label>
+                        <input type="number" class="form-control" name="tiempo_coccion" id="tiempo_coccion" placeholder="Medido en minutos" required>
+                    </div>
+                    <div class="form-group p-2 col-6">
+                        <label for="tiempo_preparacion">Tiempo de Preparacion</label>
+                        <input type="number" class="form-control" name="tiempo_preparacion" id="tiempo_preparacion" placeholder="Medido en minutos" required>
+                    </div>
+                    <div class="form-group p-2">
+                        <label for="ingredientes">Ingredientes</label>
+                        <textarea class="form-control" name="ingredientes" id="ingredientes" placeholder="Escribe aquí los ingredientes necesarios para esta receta" rows="6" required></textarea>
+                    </div>
+                    <div class="form-group p-2">
+                        <label for="preparacion">Preparación</label>
+                        <textarea class="form-control" name="preparacion" id="preparacion" placeholder="Escribe brevemente la preparación de la receta" rows="6" required></textarea>
+                    </div>
+                    <div class="form-group p-2">
+                        <label for="img">Carga una imagen para tu receta</label>
+                        <input type="file" class="form-control" name="img" id="img" accept="image/jpeg" required>
+                    </div>
+                    <div class="text-center pb-5">
+                        <button type="submit" class="btn btn-primary align-items-center" style="background-color: #f15025 !important; color: white !important;">Subir receta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
