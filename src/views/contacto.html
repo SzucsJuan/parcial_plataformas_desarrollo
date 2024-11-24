@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +10,11 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/84afdc28bf.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>DR - Contacto</title>
 </head>
 <nav class="navbar navbar-expand-md bg-body-tertiary">
@@ -40,7 +44,8 @@
                         <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                     <li class="nav-item" id="adminProfile">
-                        <a href="#" id="profileIcon" class="nav-link">
+                        <a href="#" id="profileIcon" class="nav-link" data-bs-toggle="modal"
+                            data-bs-target="#roleModal">
                             <span class="material-icons">account_circle</span>
                         </a>
                     </li>
@@ -49,16 +54,28 @@
                             <span class="material-icons">login</span>
                         </a>
                     </li>
-                    <div id="roleModal" class="modal hidden">
-                        <div class="modal-content">
-                            <span class="close" onclick="closeModal()">&times;</span>
-                            <div id="adminOptions" class="options hidden">
-                                <button onclick="handleAction('adminUsuarios')">Administrar Usuarios</button>
-                                <button onclick="handleAction('adminRecetas')">Administrar Recetas</button>
-                                <button onclick="handleAction('cargarRecetas')">Cargar Recetas</button>
+                    <div class="modal fade" id="roleModal" tabindex="-1" aria-labelledby="roleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="roleModalLabel">Panel de Administrador</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <button class="btn btn-primary w-100 mb-2" onclick="handleAction('adminUsuarios')">
+                                        Administrar Usuarios <span class="ms-2">👥</span>
+                                    </button>
+                                    <button class="btn btn-primary w-100 mb-2" onclick="handleAction('adminRecetas')">
+                                        Administrar Recetas <span class="ms-2">🍝</span>
+                                    </button>
+                                    <button class="btn btn-primary w-100 mb-2" onclick="handleAction('cargarRecetas')">
+                                        Agregar Receta <span class="ms-2">🍴</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 </ul>
         </div>
     </div>
@@ -68,7 +85,8 @@
     <div class="container col-8">
         <div class="text-center pt-5">
             <h1>Contactanos</h1>
-            <p>Queremos conocerte y mejorar junto a tus recomendaciones y necesidades. <br> Ayúdanos a crecer dejándonos tu opinión!</p>
+            <p>Queremos conocerte y mejorar junto a tus recomendaciones y necesidades. <br> Ayúdanos a crecer dejándonos
+                tu opinión!</p>
         </div>
         <form action="">
             <div class="form-group p-2">
@@ -82,30 +100,33 @@
             <div class="row p-2">
                 <div class="form-group col-4 col-sm-6">
                     <label for="exampleFormControlSelect1">Recetas</label>
-                    <select class="form-control col-3" placeholder="comidas y delicias" id="exampleFormControlSelect1" required>
+                    <select class="form-control col-3" placeholder="comidas y delicias" id="exampleFormControlSelect1"
+                        required>
                     </select>
                 </div>
                 <div class="form-group col-4 col-sm-6">
                     <label for="exampleFormControlSelect1">Valoración</label>
-                    <select class="form-control col-3" placeholder="puntúa nuestra página" id="exampleFormControlSelect1" required>
-                    <option>Seleccione</option>
-                    <option>Mala</option>
-                    <option>No muy buena</option>
-                    <option>Ni buena ni mala</option>
-                    <option>Normal</option>
-                    <option>Buena</option>
-                    <option>Muy buena</option>
-                    <option>Me encanto</option>
+                    <select class="form-control col-3" placeholder="puntúa nuestra página"
+                        id="exampleFormControlSelect1" required>
+                        <option>Seleccione</option>
+                        <option>Mala</option>
+                        <option>No muy buena</option>
+                        <option>Ni buena ni mala</option>
+                        <option>Normal</option>
+                        <option>Buena</option>
+                        <option>Muy buena</option>
+                        <option>Me encanto</option>
                     </select>
                 </div>
             </div>
             <div class="form-group p-2">
-            <label for="exampleFormControlInput1">Correo Electronico</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com" required>
+                <label for="exampleFormControlInput1">Correo Electronico</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@ejemplo.com"
+                    required>
             </div>
             <div class="form-group p-2">
-            <label for="exampleFormControlTextarea1">Dejanos tu opinion</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Escribe aqui..." rows="6"></textarea required>
+                <label for="exampleFormControlTextarea1">Dejanos tu opinion</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Escribe aqui..." rows="6"></textarea required>
             </div>
             <div class="text-center pt-3">
                 <img src="../public/images/sombrero-chef.png" alt="">

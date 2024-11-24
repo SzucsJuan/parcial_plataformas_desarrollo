@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,7 +45,8 @@
                         <a class="nav-link" href="contacto.html">Contacto</a>
                     </li>
                     <li class="nav-item" id="adminProfile">
-                        <a href="#" id="profileIcon" class="nav-link">
+                        <a href="#" id="profileIcon" class="nav-link" data-bs-toggle="modal"
+                            data-bs-target="#roleModal">
                             <span class="material-icons">account_circle</span>
                         </a>
                     </li>
@@ -53,16 +55,28 @@
                             <span class="material-icons">login</span>
                         </a>
                     </li>
-                    <div id="roleModal" class="modal hidden">
-                        <div class="modal-content">
-                            <span class="close" onclick="closeModal()">&times;</span>
-                            <div id="adminOptions" class="options hidden">
-                                <button onclick="handleAction('adminUsuarios')">Administrar Usuarios</button>
-                                <button onclick="handleAction('adminRecetas')">Administrar Recetas</button>
-                                <button onclick="handleAction('cargarRecetas')">Cargar Recetas</button>
+                    <div class="modal fade" id="roleModal" tabindex="-1" aria-labelledby="roleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="roleModalLabel">Panel de Administrador</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <button class="btn btn-primary w-100 mb-2" onclick="handleAction('adminUsuarios')">
+                                        Administrar Usuarios <span class="ms-2">👥</span>
+                                    </button>
+                                    <button class="btn btn-primary w-100 mb-2" onclick="handleAction('adminRecetas')">
+                                        Administrar Recetas <span class="ms-2">🍝</span>
+                                    </button>
+                                    <button class="btn btn-primary w-100 mb-2" onclick="handleAction('cargarRecetas')">
+                                        Agregar Receta <span class="ms-2">🍴</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 </ul>
         </div>
     </div>
@@ -72,7 +86,7 @@
     <div class="container pt-4">
         <h1 class="text-center">Opiniones de algunos de nuestros usuarios</h1>
         <div class="list-group pb-5">
-        
+
         </div>
     </div>
     <footer class="text-center text-lg-start bg-light text-muted footer">
@@ -126,4 +140,5 @@
     </footer>
     <script src="../assets/js/roles.js"></script>
 </body>
+
 </html>
