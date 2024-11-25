@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Agregar Receta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <div class="modal fade" id="cargarRecetasModal" tabindex="-1" aria-labelledby="cargarRecetasModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="titulo justify-content-center mt-0">Agregar una nueva receta</h3>
-                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> BOTON SIN UTILIDAD -->
-                </div>
-                <div class="modal-body">
-                    <form enctype="multipart/form-data">
-                        <div class="form-group p-2">
-                            <label for="nombre">Nombre de la receta</label>
-                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese el nombre" required>
+    <div class="container mt-5 d-flex justify-content-center">
+        <div class="card shadow-lg" style="max-width: 800px; width: 100%;">
+            <div class="card-header  text-white text-center" style="background-color: #f15025;">
+                <h3 class="mb-0">Agregar una nueva receta</h3>
+            </div>
+            <div class="card-body">
+                <form enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre de la receta</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese el nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tipo" class="form-label">Tipo de Receta</label>
+                        <select class="form-control" name="tipo" id="tipo" required>
+                            <option value="dulce">Dulce</option>
+                            <option value="salado">Salado</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="tiempo_coccion" class="form-label">Tiempo de Cocción</label>
+                            <input type="number" class="form-control" name="tiempo_coccion" id="tiempo_coccion" placeholder="En minutos" required>
                         </div>
-                        <div class="form-group p-2">
-                            <label for="tipo">Tipo de Receta</label>
-                            <select class="form-control" name="tipo" id="tipo" required>
-                                <option value="dulce">Dulce</option>
-                                <option value="salado">Salado</option>
-                            </select>
+                        <div class="col-md-6 mb-3">
+                            <label for="tiempo_preparacion" class="form-label">Tiempo de Preparación</label>
+                            <input type="number" class="form-control" name="tiempo_preparacion" id="tiempo_preparacion" placeholder="En minutos" required>
                         </div>
-                        <div class="form-group p-2 col-6">
-                            <label for="tiempo_coccion">Tiempo de Coccion</label>
-                            <input type="number" class="form-control" name="tiempo_coccion" id="tiempo_coccion" placeholder="Medido en minutos" required>
-                        </div>
-                        <div class="form-group p-2 col-6">
-                            <label for="tiempo_preparacion">Tiempo de Preparacion</label>
-                            <input type="number" class="form-control" name="tiempo_preparacion" id="tiempo_preparacion" placeholder="Medido en minutos" required>
-                        </div>
-                        <div class="form-group p-2">
-                            <label for="ingredientes">Ingredientes</label>
-                            <textarea class="form-control" name="ingredientes" id="ingredientes" placeholder="Escribe aquí los ingredientes necesarios para esta receta" rows="6" required></textarea>
-                        </div>
-                        <div class="form-group p-2">
-                            <label for="preparacion">Preparación</label>
-                            <textarea class="form-control" name="preparacion" id="preparacion" placeholder="Escribe brevemente la preparación de la receta" rows="6" required></textarea>
-                        </div>
-                        <div class="form-group p-2">
-                            <label for="img">Carga una imagen para tu receta</label>
-                            <input type="file" class="form-control" name="img" id="img" accept="image/jpeg" required>
-                        </div>
-                        <div class="text-center pb-5">
-                            <button id="subirReceta" type="submit" class="btn btn-primary align-items-center" style="background-color: #f15025 !important; color: white !important;">Subir receta</button>
-                            <button type="button" id="btnListadoRecetas" class="btn btn-secondary">Ver Listado</button>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ingredientes" class="form-label">Ingredientes</label>
+                        <textarea class="form-control" name="ingredientes" id="ingredientes" placeholder="Escribe los ingredientes necesarios para esta receta" rows="4" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="preparacion" class="form-label">Preparación</label>
+                        <textarea class="form-control" name="preparacion" id="preparacion" placeholder="Escribe brevemente la preparación de la receta" rows="4" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="img" class="form-label">Carga una imagen para tu receta</label>
+                        <input type="file" class="form-control" name="img" id="img" accept="image/jpeg">
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button id="subirReceta" type="submit" class="btn btn-primary" style="background-color: #f15025;">Subir receta</button>
+                        <button type="button" id="btnListadoRecetas" class="btn btn-secondary">Ver Listado</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
     <script src="/src/assets/js/cargar_recetas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
