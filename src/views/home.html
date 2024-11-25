@@ -83,7 +83,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="reseñas.html">Reseñas</a>
                         </li>
-                        <li class="nav-item">
+                        <li id="randomHeader" class="nav-item">
                             <a class="nav-link" href="#">Random</a>
                         </li>
                         <li class="nav-item">
@@ -133,7 +133,7 @@
         <h1 class="jumbotron-title display-3 fw-bold titulo-banner-prinicpal">Encuentra tu receta</h1>
         <div class="buttons-container d-flex flex-row p-3 gap-4">
             <div>
-                <a class="button2 btn fw-bold" href="recetas.html">Recetas</a>
+                <a class="button2 btn fw-bold" href="recetagis.html">Recetas</a>
             </div>
         </div>
     </div>
@@ -145,7 +145,7 @@
             align-items-center text-white text-center">
                 <h1 class="jumbotron-title2 display-3 fw-bold titulo">¿Te animas a un juego?</h1>
                 <div class="buttons-container d-flex flex-row p-3 gap-4">
-                    <a class="button1 btn fw-bold" href="#" onclick="redireccionar()">SORPRENDEME</a>
+                    <a id="sorprendemeBtn" class="button1 btn fw-bold" href="#" onclick="redireccionar()">SORPRENDEME</a>
                 </div>
             </div>
         </section>
@@ -203,6 +203,24 @@
             </div>
         </section>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () =>{
+            const randomHeader = document.querySelector('a.nav-link[href="#"]');
+            if(randomHeader){
+                randomHeader.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    alert("En desarrollo");
+                });
+            }
+            const sorprendemeBtn = document.querySelector('.button1');
+            if(sorprendemeBtn){
+                sorprendemeBtn.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    alert("En desarrollo");
+                });
+            }
+        })
+    </script>
     <script src="../assets/js/roles.js"></script>
     <script src="../assets/js/cargar_recetas.js"></script>
 </body>
