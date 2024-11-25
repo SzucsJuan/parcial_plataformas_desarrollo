@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     recetas.forEach((receta) => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>${receta.id}</td>
+            <td class="hidden">${receta.id}</td>
             <td>${receta.nombre}</td>
             <td>${receta.tipo}</td>
             <td>${receta.tiempoTotal} minutos</td>

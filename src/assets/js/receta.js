@@ -14,9 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
             recetaElement.innerHTML = `
                 <div class="card h-100">
+                    <img src="${receta.imagen || '../public/images/default-recipe.jpg'}" class="card-img-top" alt="${receta.nombre}">
                     <div class="card-body">
                         <h5 class="card-title">${receta.nombre}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Tipo: ${receta.tipo}</h6>
+                        <h6 class="card-subtitle mb-2 text-muted">Tipo: ${receta.tipo.charAt(0).toUpperCase() + receta.tipo.slice(1).toLowerCase()}</h6>
                         <p class="card-text"><strong>Ingredientes:</strong></p>
                         <ul class="list-group list-group-flush">
                             ${receta.ingredientes.map(ingrediente => `<li class="list-group-item">${ingrediente}</li>`).join('')}
@@ -26,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 </div>
             `;
-
             recetasContainer.appendChild(recetaElement);
         });
     } else {
