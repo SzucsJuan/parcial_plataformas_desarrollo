@@ -1,24 +1,31 @@
-document.querySelector('a[href="cargar_recetas.html"]').addEventListener('click', function (e) {
-    e.preventDefault();
+document.getElementById('subirReceta').addEventListener('click', function(){
+    console.log('El boton fue presionado');
+    const nombre = document.getElementById('nombre').value;
+    const tipo = document.getElementById('tipo').value;
+    const tiempoCoccion = document.getElementById('tiempo_coccion').value;
+    const tiempoPreparacion = document.getElementById('tiempo_preparacion').value;
+    const ingredientes = document.getElementById('ingredientes').value;
+    const preparacion = document.getElementById('preparacion').value;
 
-    fetch('admin_views/cargar_recetas.html')
-        .then(response => {
-            if (!response.ok) throw new Error('Error al cargar el archivo');
-            return response.text();
-        })
-        .then(html => {
-            const tempDiv = document.createElement('div');
-            tempDiv.innerHTML = html;
-            
-            const modalElement = tempDiv.querySelector('#cargarRecetasModal');
-            
-            if (modalElement) {
-                document.body.appendChild(modalElement);
-                const modal = new bootstrap.Modal(modalElement);
-                modal.show();
-            } else {
-                console.error('No se encontró el modal en el archivo cargado.');
-            }
-        })
-        .catch(error => console.error('Error cargando el modal:', error));
-});
+    const receta ={
+        id: Date.now(),
+        nombre,
+        tipo,
+        tiempoTotal: parseInt(tiempoCoccion) + parseInt(tiempoPreparacion),
+        ingredientes,
+        preparacion
+    };
+    const recetasGuardadas = JSON.parse(localStorage.getItem('recetas')) || [];
+
+    recetasGuardadas.push(receta);
+
+    localStorage.setItem('recetas', JSON.stringify(recetasGuardadas));
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+    const btnListadoRecetas = document.getElementById('btnListadoRecetas');
+
+    btnListadoRecetas.addEventListener('click', () =>{
+        window.location.href = '../../views/admin_views/listado_recetas.html'
+    })
+})

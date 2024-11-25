@@ -88,7 +88,9 @@
         </div>
     </nav>
     <div class="container pt-4">
-        <h1 class="text-center">Listado de recetas activas</h1>
+        <h1 class="text-center">Listado de recetas activas
+            <button id="agregarReceta" class="btn btn-success btn-sm ms=2" onclick="window.location.href='cargar_recetas.html'">+</button>
+        </h1>
         <table class="table table-sm table-striped table-hover">
             <thead class="table-dark">
                 <tr>
@@ -99,8 +101,8 @@
                     <th>Acciones</th>
                 </tr>
             </thead>
-            <tbody>
 
+            <tbody>
             </tbody>
         </table>
         <div class="d-flex justify-content-center">
@@ -161,7 +163,9 @@
             </div>
         </section>
     </footer>
-    <script src="../../assets/js/cargar_recetas.js"></script>
+    <script src="/src/assets/js/cargar_recetas.js"></script>
+    <script src="/src/assets/js/lista_recetas.js"></script>
+
 </body>
 
 </html>

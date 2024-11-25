@@ -19,9 +19,9 @@
     <title>Digital Recipes</title>
     <script>
         const recetas = [
-            { id: 1, nombre: "Budín", img: "budin.jpg", subtitulo: "Postre clásico", reseñas: 5 },
-            { id: 2, nombre: "Lasagna", img: "lasagna.jpg", subtitulo: "Plato italiano", reseñas: 8 },
-            { id: 3, nombre: "Tarta", img: "tarta.jpg", subtitulo: "Rápido y delicioso", reseñas: 3 },
+            { id: 1, nombre: "Budín", img: "cookies.jpg", subtitulo: "Postre clásico", reseñas: 5 },
+            { id: 2, nombre: "Lasagna", img: "cookies.jpg", subtitulo: "Plato italiano", reseñas: 8 },
+            { id: 3, nombre: "Tarta", img: "cookies.jpg", subtitulo: "Rápido y delicioso", reseñas: 3 },
         ];
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -32,7 +32,7 @@
                         <div class="col-sm-4 mb-sm-0 p-4">
                             <a href="receta_individual.html?id=${receta.id}">
                                 <div class="card">
-                                    <img src="img/recetas/${receta.img}" alt="Imagen de ${receta.nombre}">
+                                    <img src="/src/public/images/recetas/${receta.img}" alt="Imagen de ${receta.nombre}">
                                     <div class="card-body">
                                         <h5 class="card-title">${receta.subtitulo}</h5>
                                         <h3 class="card-text">${receta.nombre}</h3>
@@ -52,7 +52,6 @@
                 recetasContainer.innerHTML = "No hay recetas registradas.";
             }
         });
-
         function redireccionar() {
             const enlaces = [
                 "/html/recetas/recetaBudin.html",
