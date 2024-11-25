@@ -23,3 +23,10 @@
     color: #F15025 !important;
 }
 
+.banner-jumbotron-recetas{
+    background-image: url(../../public/images/Banner-recetas-salado.jpg);
+    background-size: cover;
+    background-position: 40%;
+    height: 50vh;
+}
+

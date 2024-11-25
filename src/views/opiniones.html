@@ -83,9 +83,36 @@
 <body>
     <div class="container pt-4">
         <h1 class="text-center">Opiniones de algunos de nuestros usuarios</h1>
-        <div class="list-group pb-5">
-
+        <div class="container mt-5">
+            <h2 class="text-center">Deja tu comentario</h2>
+            <form id="opinionForm" class="mb-4">
+                <div class="mb-3">
+                    <label for="comentario" class="form-label">Comentario</label>
+                    <textarea class="form-control" id="comentario" rows="3" placeholder="Escribe tu comentario aquí" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="valoracion" class="form-label">Valoración (1 a 10)</label>
+                    <select class="form-select" id="valoracion" required>
+                        <option value="" selected disabled>Selecciona tu valoración</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Enviar</button>
+            </form>
+            <hr>
+            <h2 class="text-center">Comentarios Recientes</h2>
+            <div id="opinionList" class="list-group mt-4"></div>
         </div>
+        
     </div>
     <footer class="text-center text-lg-start bg-light text-muted footer">
         <section class="">
@@ -136,8 +163,7 @@
             </div>
         </section>
     </footer>
-    <script src="../assets/js/roles.js"></script>
-    <script src="../assets/js/cargar_recetas.js"></script>
+    <script src="../assets/js/opiniones.js" defer></script>
 </body>
 
 </html>
