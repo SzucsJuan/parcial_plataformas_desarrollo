@@ -113,3 +113,13 @@ footer {
 .options button {
     margin: 10px;
 }
+
+.row > .col-md-4 {
+    transition: transform 0.3s ease;
+}
+        
+.row > .col-md-4:hover {
+    transform: translateY(-10px);
+}
+
+    
